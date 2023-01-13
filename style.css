@@ -158,18 +158,12 @@ html {
   flex-direction: column;
 }
 
-.content-menu__nav-container {
-  overflow: hidden;
-  position: relative;
-}
-
 .content-menu__nav {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
   padding: 0;
   background-color: #f8f8f8;
   list-style-type: none;
@@ -178,7 +172,7 @@ html {
 }
 
 .content-menu__nav::-webkit-scrollbar {
-  display: none;
+  background-color: #f8f8f8;
 }
 
 .content-menu__title {
