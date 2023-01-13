@@ -40,6 +40,7 @@ html {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  overflow-x: auto;
 }
 
 .body {
@@ -157,14 +158,12 @@ html {
   display: flex;
   flex-direction: column;
 }
-.content-menu__nav-container {
-}
+
 .content-menu__nav {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: x mandatory;
   padding: 0;
   background-color: #f8f8f8;
   list-style-type: none;
