@@ -94,7 +94,7 @@ html {
   height: 32px;
 }
 
-.header__link--hidden {
+.header.hidden {
   display: none;
 }
 
@@ -110,23 +110,20 @@ html {
 /* Скрытые кнопки меню */
 
 .header__item--call {
-  display: none;
-  content: url("img/header/call.svg");
+  background-image: url("img/header/call.svg");
 }
 
 .header__item--chat {
-  display: none;
   background-image: url("img/header/chat.svg");
 }
 
 .header__item--profile {
-  display: none;
   background-image: url("img/header/profile.svg");
 }
 
 /* Видимые в mobile кнопки меню */
 
-.header__divider--right {
+.header__right-side .header__divider {
   display: block;
 }
 
@@ -147,6 +144,10 @@ html {
 }
 
 /* Menu */
+.hidden {
+  display: none;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -185,30 +186,24 @@ html {
 }
 
 .content-menu__item {
-  padding: 8px 9.3px 8px 16.5px;
+  padding: 8px 16px;
   font-size: 1.1429rem;
   letter-spacing: -0.2px;
   color: #7e7e82;
+  border-radius: 6px;
   scroll-snap-align: start;
+  transition: border 0.4s, color 0.4s, background-color 0.4s;
 }
 
 .content-menu__item:hover {
-  background-color: #ffffff;
-  border-radius: 6px;
+  background-color: #b4bbc5;
+  border-color: #b4bbc5;
+  color: #ffffff;
 }
 
-.content-menu__item--hidden {
-  display: none;
-}
-
-.content-menu__link:hover {
-  color: #1b1c21;
-}
-
-.content-menu__item:nth-child(2) {
+.content-menu__item--active {
   background-color: #ffffff;
   border: 2px solid #b8ffec;
-  border-radius: 6px;
 }
 
 .content-menu__link {
@@ -262,10 +257,12 @@ html {
   background: #f8f8f8 url("img/main/article/icon.svg") left center no-repeat;
   line-height: 24px;
   font-size: 1.1429rem;
+  transition: color 0.4s;
 }
 
 .article__button:hover {
-  text-decoration: underline 1px #1b1c21;
+  color: #7e7e82;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1119.99px) {
@@ -273,7 +270,7 @@ html {
     min-width: 23%;
   }
 
-  .header__divider--left {
+  .header__left-side.header__divider {
     display: block;
   }
 
@@ -281,21 +278,12 @@ html {
     min-width: 290px;
   }
 
-  .header__item--call,
-  .header__item--chat,
-  .header__item--profile,
-  .header__link--hidden {
+  .header .hidden {
     display: block;
   }
 
   .content {
     padding-left: 24px;
-  }
-
-  .content-menu__item:nth-child(2) {
-    background-color: #ffffff;
-    border: 2px solid #b8ffec;
-    border-radius: 6px;
   }
 
   .article {
@@ -365,7 +353,6 @@ html {
 
   .header__link {
     text-decoration: none;
-
     color: #1b1c21;
     align-content: center;
     margin: auto;
@@ -394,21 +381,19 @@ html {
     margin: 0;
   }
 
-  .content-menu__item--hidden {
+  .content-menu__item--active {
+    background-color: inherit;
+    border: none;
+  }
+
+  .content-menu__item:first-child {
     display: block;
     background-color: #ffffff;
     border: 2px solid #b8ffec;
-    border-radius: 6px;
   }
-
-  .content-menu__item:nth-child(2) {
-    background-color: inherit;
-    border: none;
-    border-radius: none;
-  }
-
-  .content-menu__item:nth-child(2):hover {
-    background-color: #ffffff;
+  .content-menu__item:first-child:hover {
+    background-color: #b4bbc5;
+    border-color: #b4bbc5;
   }
 
   .article {
