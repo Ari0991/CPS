@@ -162,13 +162,15 @@ html {
   list-style-type: none;
   white-space: nowrap;
   letter-spacing: -0.2px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .content-menu__nav::-webkit-scrollbar {
   background-color: #f8f8f8;
 }
 
-.content-menu__title {
+.content-menu__nav::-moz-scroll .content-menu__title {
   margin: 0;
   margin-bottom: 24px;
 }
