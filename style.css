@@ -103,7 +103,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 9.24rem;
+  min-width: 9rem;
 }
 
 /* Скрытые кнопки меню */
@@ -192,6 +192,8 @@ html {
   border-radius: 6px;
   scroll-snap-align: start;
   transition: border 0.4s, color 0.4s, background-color 0.4s;
+  -webkit-transition: border 0.4s, color 0.4s, background-color 0.4s;
+  -o-transition: border 0.4s, color 0.4s, background-color 0.4s;
 }
 
 .content-menu__item:hover {
@@ -257,6 +259,8 @@ html {
   line-height: 24px;
   font-size: 1.1429rem;
   transition: color 0.4s;
+  -webkit-transition: color 0.4s;
+  -o-transition: color 0.4s;
 }
 
 .article__button:hover {
