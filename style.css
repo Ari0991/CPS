@@ -88,7 +88,6 @@ html {
 }
 
 .header__divider {
-  display: none;
   background-color: #eaeaea;
   width: 2px;
   height: 32px;
@@ -270,7 +269,7 @@ html {
     min-width: 23%;
   }
 
-  .header__left-side.header__divider {
+  .header__divider {
     display: block;
   }
 
