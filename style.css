@@ -191,9 +191,16 @@ html {
   color: #7e7e82;
   border-radius: 6px;
   scroll-snap-align: start;
-  transition: border 0.4s, color 0.4s, background-color 0.4s;
-  -webkit-transition: border 0.4s, color 0.4s, background-color 0.4s;
-  -o-transition: border 0.4s, color 0.4s, background-color 0.4s;
+  transition: border 0.4s, background-color 0.4s;
+  -webkit-transition: border 0.4s, background-color 0.4s;
+  -o-transition: border 0.4s, background-color 0.4s;
+  -moz-transition: border 0.4s, background-color 0.4s;
+  -ms-transition: border 0.4s, background-color 0.4s;
+}
+
+.content-menu__item--active {
+  background-color: #ffffff;
+  border: 2px solid #b8ffec;
 }
 
 .content-menu__item:hover {
@@ -202,14 +209,18 @@ html {
   color: #ffffff;
 }
 
-.content-menu__item--active {
-  background-color: #ffffff;
-  border: 2px solid #b8ffec;
-}
-
 .content-menu__link {
   text-decoration: none;
   color: #7e7e82;
+  -webkit-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  -moz-transition: color 0.4s;
+  -ms-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.content-menu__link:hover {
+  color: #ffffff;
 }
 
 /* Article */
@@ -261,6 +272,8 @@ html {
   transition: color 0.4s;
   -webkit-transition: color 0.4s;
   -o-transition: color 0.4s;
+  -moz-transition: color 0.4s;
+  -ms-transition: color 0.4s;
 }
 
 .article__button:hover {
@@ -398,6 +411,7 @@ html {
   .content-menu__item:first-child:hover {
     background-color: #b4bbc5;
     border-color: #b4bbc5;
+    color: #ffffff;
   }
 
   .article {
