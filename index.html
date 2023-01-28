@@ -331,22 +331,24 @@
     </main>
 
     <script>
-      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
+      // import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
+
       const swiper = new Swiper(".swiper", {
-        observer: true,
+        // enabled: true,
+        // observer: true,
         direction: "horizontal",
         slidesPerView: "auto",
         spaceBetween: 16,
         clickable: true,
-        breakpoints: {
-          768: {
-            enabled: false,
-            allowTouchMove: false,
-          },
-          1120: {
-            enabled: false,
-          },
-        },
+        // breakpoints: {
+
+        //   768: {
+        //     // enabled: false,
+        //   },
+        //   1120: {
+        //     // enabled: false,
+        //   },
+        // },
 
         pagination: {
           el: ".swiper__pagination",
