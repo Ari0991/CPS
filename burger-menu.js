@@ -44,7 +44,7 @@ const readMore = swiperBlock.querySelector(".swiper__button--read-more");
 const buttonIcon = readMore.querySelector(".button__icon");
 const readMoreText = readMore.querySelector(".button__text");
 
-let readMoreContent = addEventListener("click", function () {
+let readMoreContent = readMore.addEventListener("click", function () {
   if (swiperWrapper.classList.contains("swiper-wrapper--hide-content")) {
     swiperWrapper.classList.remove("swiper-wrapper--hide-content");
     swiperWrapper.classList.add("swiper-wrapper--max-height");
