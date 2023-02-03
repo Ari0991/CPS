@@ -47,7 +47,10 @@ const buttonIcon = readMore.querySelector(".button__icon");
 const readMoreText = readMore.querySelector(".button__text");
 
 let readMoreContent = readMore.addEventListener("click", function () {
-  if (swiperWrapper.classList.contains("swiper-wrapper--hide-content")) {
+  let isContentHide = swiperWrapper.classList.toggle(
+    "swiper-wrapper--hide-content"
+  );
+  if (!isContentHide) {
     swiperWrapper.classList.remove("swiper-wrapper--hide-content");
     swiperWrapper.classList.add("swiper-wrapper--max-height");
     if (window.innerWidth >= 1120) {
@@ -56,7 +59,7 @@ let readMoreContent = readMore.addEventListener("click", function () {
     } else {
       readMore.classList.add("hidden");
     }
-  } else if (swiperWrapper.classList.contains("swiper-wrapper--max-height")) {
+  } else if (isContentHide) {
     swiperWrapper.classList.add("swiper-wrapper--hide-content");
     swiperWrapper.classList.remove("swiper-wrapper--max-height");
     readMoreText.textContent = "Показать все";
