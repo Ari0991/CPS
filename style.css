@@ -497,9 +497,16 @@ html {
 
   .swiper-wrapper {
     padding-top: 24px;
+
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(224px, 240px));
-    gap: 24px;
+    justify-content: space-between;
+    row-gap: 24px;
+  }
+
+  .swiper::after {
+    visibility: hidden;
   }
 
   .swiper-wrapper--hide-content {
@@ -658,13 +665,18 @@ html {
     overflow: hidden;
   }
 
+  .swiper::after {
+    visibility: hidden;
+  }
+
   .swiper-wrapper {
     padding-top: 24px;
     display: grid;
     display: -ms-grid;
 
     grid-template-columns: repeat(auto-fit, minmax(224px, 240px));
-    gap: 32px;
+    justify-content: space-between;
+    row-gap: 32px;
     margin-bottom: 10px;
   }
 
